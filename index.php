@@ -12,12 +12,6 @@
     </head>
     <body>
         <div class="container bg-black">
-            <div id="conexion-database">
-                <?php 
-                    require_once('./DB/conexion.php');
-                ?>
-            </div>
-
             <header>
                 <div>
                     <img src="../IMG/Icons n Banners/logo.png" alt="LOGO">
@@ -31,6 +25,12 @@
                     <a href="#">Carito</a>
                 </nav>
             </header>
+            <div id="conexion-database" class="text-light">
+                <?php 
+                    require_once('./DB/conexion.php');
+                    echo $consulta;
+                ?>
+            </div>
         </div>
         <!-- SCRIPT & BOOTSTRAP -->
         <script src="JS/bootstrap.bundle.min.js"></script>
