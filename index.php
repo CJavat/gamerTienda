@@ -8,7 +8,7 @@
         <!-- STYLE & BOOTSTRAP-->
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/style.css">
-        <title>DEATH FAMILY</title>
+        <title>CJAVAT GAMERS STORE</title>
     </head>
     <body>
         <div class="container bg-black">
@@ -28,7 +28,8 @@
             <div id="conexion-database" class="text-light">
                 <?php 
                     require_once('./DB/conexion.php');
-                    echo $consulta;
+                    
+                    echo $resultado;
                 ?>
             </div>
         </div>

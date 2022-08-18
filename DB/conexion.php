@@ -3,8 +3,8 @@
     $database_conexion = "cjavatgamers";
     $username_conexion = "root";
     $password_conexion = "";
-    $conexion = mysqli_connect($hostname_conexion, $username_conexion, $password_conexion, $database_conexion); 
-
+    $conexion = mysqli_connect($hostname_conexion, $username_conexion, $password_conexion); 
+    $dataBase = mysqli_select_db($conexion, $database_conexion);
     /* if(!$conexion) {
         echo 'ERROR: No se pudo conectar a MYSQL.' . PHP_EOL;
         echo 'errno de depuración: ' . mysqli_connect_errno() . PHP_EOL;
@@ -17,7 +17,14 @@
 */
     //mysqli_close($conexion); //PARA CERRAR LA CONEXION CON LA BASE DE DATOS.
     //$DBSeleccionada = mysqli_select_db($conexion ,"cjavatgamers"); 
-    mysqli_select_db($conexion,'cjavatgamers');
+    //mysqli_select_db($conexion,'cjavatgamers');
     $query = "select * from usuarios";
     $consulta = mysqli_query($conexion,$query);
+    $rows = mysqli_fetch_all($consulta);
+    $i=0;
+    while($i<1) {
+        $resultado = $rows;
+        $i++;
+    }
+    $resultado
 ?>
